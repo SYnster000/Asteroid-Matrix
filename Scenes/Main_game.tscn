@@ -1,18 +1,21 @@
 [gd_scene format=3 uid="uid://bmhx25jfacnx2"]
 
-[ext_resource type="Script" uid="uid://c5jr5usd1pfoh" path="res://Scripts/first_scene.gd" id="1_7s6yn"]
 [ext_resource type="PackedScene" uid="uid://c72nsq3cty7jo" path="res://Scenes/hud.tscn" id="2_6qrkm"]
+[ext_resource type="PackedScene" uid="uid://3t7ybdheeych" path="res://Scenes/died.tscn" id="2_7s6yn"]
 [ext_resource type="Script" uid="uid://dnbkitt626klg" path="res://Scripts/ship.gd" id="3_mlwp0"]
 [ext_resource type="Script" uid="uid://ckfuoijmsrgtb" path="res://Scripts/hitbox.gd" id="4_trbel"]
 [ext_resource type="Script" uid="uid://dqxwwwcq5cos8" path="res://Scripts/asteroid_spawner.gd" id="5_vj6g5"]
 [ext_resource type="PackedScene" uid="uid://jcv4dmycc3d4" path="res://Scenes/asteroid.tscn" id="6_rupfi"]
 
+[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_7s6yn"]
+
 [node name="Main_game" type="Node2D" unique_id=1321049088]
-script = ExtResource("1_7s6yn")
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=294126232]
 
 [node name="HUD" parent="UI" unique_id=2075642364 instance=ExtResource("2_6qrkm")]
+
+[node name="DIED" parent="UI" unique_id=405516288 instance=ExtResource("2_7s6yn")]
 
 [node name="Ship" type="CharacterBody2D" parent="." unique_id=533130004]
 light_mask = 7
@@ -50,3 +53,8 @@ polygon = PackedVector2Array(0, -12, 10, 10, 4, 4, -4, 4, -10, 10)
 [node name="AsteroidSpawner" type="Node2D" parent="." unique_id=2108188524]
 script = ExtResource("5_vj6g5")
 asteroid_scene = ExtResource("6_rupfi")
+max_on_screen = 100
+spawn_interval = 1.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=66261835]
+stream = SubResource("AudioStreamGenerator_7s6yn")

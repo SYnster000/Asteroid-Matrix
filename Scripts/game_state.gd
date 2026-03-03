@@ -1,16 +1,19 @@
 extends Node
 
 
-var score := 0
-var hp := 5
+var score
+var hp
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	reset()
 
+func reset():
+	GameState.score = 0
+	GameState.hp = 5
+	get_tree().reload_current_scene()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("reset"):
-		GameState.score = 0
-		get_tree().reload_current_scene()
+		GameState.reset()

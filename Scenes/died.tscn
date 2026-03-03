@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://3t7ybdheeych"]
+
+[ext_resource type="Script" uid="uid://jaqgavp4lksl" path="res://Scripts/ui_died.gd" id="1_ccn0r"]
+[ext_resource type="FontFile" uid="uid://cf8w7kt0ns11t" path="res://Fonts/SourceCodePro-ExtraBold.ttf" id="1_frc15"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ccn0r"]
+font = ExtResource("1_frc15")
+font_size = 68
+
+[node name="DIED" type="Control" unique_id=405516288]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ccn0r")
+
+[node name="Message" type="Label" parent="." unique_id=1007131568]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -43.0
+offset_right = 163.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "YOU DIED"
+label_settings = SubResource("LabelSettings_ccn0r")
+horizontal_alignment = 1
+vertical_alignment = 1

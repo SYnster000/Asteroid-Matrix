@@ -5,6 +5,8 @@ var MAX_SPEED = 350.0
 var FRICTION = 0.98
 var ROTATION_SPEED = 5.0  # velocidade de giro (maior = gira mais rápido)
 
+signal died
+
 @onready var muzzle = $Muzzle
 var BulletScene = preload("res://Scenes/bullet.tscn")
 
@@ -52,4 +54,5 @@ func take_damage(amount: int):
 
 func die():
 	print("PLAYER MORREU")
+	emit_signal("died")
 	queue_free()
