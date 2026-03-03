@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bmhx25jfacnx2"]
+
+[ext_resource type="Script" uid="uid://c5jr5usd1pfoh" path="res://first_scene.gd" id="1_jqw25"]
+[ext_resource type="Script" uid="uid://dnbkitt626klg" path="res://ship.gd" id="2_4c07i"]
+[ext_resource type="Script" uid="uid://ckfuoijmsrgtb" path="res://hitbox.gd" id="3_4c07i"]
+[ext_resource type="Script" uid="uid://dqxwwwcq5cos8" path="res://asteroid_spawner.gd" id="3_jcp2k"]
+[ext_resource type="PackedScene" uid="uid://jcv4dmycc3d4" path="res://asteroid.tscn" id="4_6kre5"]
+
+[node name="Main_game" type="Node2D" unique_id=1321049088]
+script = ExtResource("1_jqw25")
+
+[node name="Ship" type="CharacterBody2D" parent="." unique_id=533130004]
+light_mask = 7
+visibility_layer = 7
+position = Vector2(616, 365)
+script = ExtResource("2_4c07i")
+
+[node name="Line2D" type="Line2D" parent="Ship" unique_id=572877652]
+light_mask = 7
+visibility_layer = 7
+rotation = 1.5707964
+points = PackedVector2Array(0, -12, 10, 10, 4, 4, -4, 4, -10, 10, -10, 10)
+closed = true
+width = 2.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ship" unique_id=1523545150]
+light_mask = 7
+visibility_layer = 7
+rotation = 1.5707964
+polygon = PackedVector2Array(0, -12, 10, 10, 4, 4, -4, 4, -10, 10)
+
+[node name="Muzzle" type="Marker2D" parent="Ship" unique_id=998499268]
+position = Vector2(13, -2)
+
+[node name="Hitbox" type="Area2D" parent="Ship" unique_id=205998278]
+light_mask = 7
+script = ExtResource("3_4c07i")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Ship/Hitbox" unique_id=960348777]
+light_mask = 7
+visibility_layer = 7
+rotation = 1.5707964
+polygon = PackedVector2Array(0, -12, 10, 10, 4, 4, -4, 4, -10, 10)
+
+[node name="AsteroidSpawner" type="Node2D" parent="." unique_id=2108188524]
+script = ExtResource("3_jcp2k")
+asteroid_scene = ExtResource("4_6kre5")

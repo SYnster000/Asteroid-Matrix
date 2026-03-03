@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://jcv4dmycc3d4"]
+
+[ext_resource type="Script" uid="uid://diwn411dbgs5y" path="res://asteroid.gd" id="1_u87q6"]
+
+[node name="Asteroid" type="Area2D" unique_id=2009755453]
+light_mask = 7
+visibility_layer = 7
+script = ExtResource("1_u87q6")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1417178105]
+scale = Vector2(0.3, 0.3)
+points = PackedVector2Array(0, -80, 40, 0, 0, 80, -40, 0)
+closed = true
+antialiased = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=734394451]
+light_mask = 7
+visibility_layer = 7
+scale = Vector2(0.315, 0.315)
+polygon = PackedVector2Array(0, -80, 40, 0, 0, 76.36363, -40, 0)
