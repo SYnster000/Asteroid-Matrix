@@ -2,8 +2,6 @@
 
 [ext_resource type="Script" uid="uid://d0u2ynnurcwv" path="res://Scripts/bullet.gd" id="1_v7oki"]
 
-[sub_resource type="AudioStreamGenerator" id="AudioStreamGenerator_xjght"]
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_v8qja"]
 b = Vector2(1.753659e-07, 5)
 
@@ -13,10 +11,6 @@ b = Vector2(1.753659e-07, 5)
 light_mask = 7
 visibility_layer = 2
 script = ExtResource("1_v7oki")
-
-[node name="LaserPlayer" type="AudioStreamPlayer" parent="Bullet" unique_id=1010230762]
-stream = SubResource("AudioStreamGenerator_xjght")
-volume_db = 13.684
 
 [node name="Line2D" type="Line2D" parent="Bullet" unique_id=342262081]
 points = PackedVector2Array(0, 0, 5, 0)

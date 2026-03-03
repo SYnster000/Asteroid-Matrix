@@ -1,9 +1,9 @@
 extends Node2D
 
 @export var asteroid_scene: PackedScene
-@export var max_on_screen: int = 5
+@export var max_on_screen: int = 500
 @export var spawn_limit: int = -1   # -1 para infinito
-@export var spawn_interval: float = 1.5
+@export var spawn_interval: float = 1
 
 var spawned_total := 0
 var rng := RandomNumberGenerator.new()

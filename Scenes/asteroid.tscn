@@ -8,7 +8,7 @@ visibility_layer = 7
 script = ExtResource("1_u87q6")
 
 [node name="Line2D" type="Line2D" parent="." unique_id=1417178105]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.5, 0.5)
 points = PackedVector2Array(0, -80, 40, 0, 0, 80, -40, 0)
 closed = true
 antialiased = true
@@ -16,5 +16,5 @@ antialiased = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=734394451]
 light_mask = 7
 visibility_layer = 7
-scale = Vector2(0.315, 0.315)
+scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(0, -80, 40, 0, 0, 76.36363, -40, 0)

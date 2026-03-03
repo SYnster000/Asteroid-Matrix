@@ -11,6 +11,7 @@ func _ready() -> void:
 func reset():
 	GameState.score = 0
 	GameState.hp = 5
+	await get_tree().process_frame
 	get_tree().reload_current_scene()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
