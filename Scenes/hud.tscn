@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c72nsq3cty7jo"]
+
+[ext_resource type="Script" uid="uid://dlrxl60m4cvsg" path="res://Scripts/hud.gd" id="1_fccik"]
+[ext_resource type="FontFile" uid="uid://cf8w7kt0ns11t" path="res://Fonts/SourceCodePro-ExtraBold.ttf" id="2_bjfho"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6fbih"]
+font = ExtResource("2_bjfho")
+font_size = 48
+
+[sub_resource type="LabelSettings" id="LabelSettings_fccik"]
+font = ExtResource("2_bjfho")
+font_size = 36
+
+[node name="HUD" type="Control" unique_id=2075642364]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fccik")
+
+[node name="Score" type="Label" parent="." unique_id=1605318815]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 327.0
+offset_bottom = 62.0
+text = "SCORE: "
+label_settings = SubResource("LabelSettings_6fbih")
+
+[node name="hp" type="Label" parent="." unique_id=1484423691]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 54.0
+offset_right = 140.0
+offset_bottom = 100.0
+text = "HP:"
+label_settings = SubResource("LabelSettings_fccik")

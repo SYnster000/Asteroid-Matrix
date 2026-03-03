@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://jcv4dmycc3d4"]
 
-[ext_resource type="Script" uid="uid://diwn411dbgs5y" path="res://asteroid.gd" id="1_u87q6"]
+[ext_resource type="Script" uid="uid://diwn411dbgs5y" path="res://Scripts/asteroid.gd" id="1_u87q6"]
 
 [node name="Asteroid" type="Area2D" unique_id=2009755453]
 light_mask = 7

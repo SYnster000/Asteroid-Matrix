@@ -4,10 +4,9 @@ var ACCELERATION = 600.0
 var MAX_SPEED = 350.0
 var FRICTION = 0.98
 var ROTATION_SPEED = 5.0  # velocidade de giro (maior = gira mais rápido)
-var hp := 5
 
 @onready var muzzle = $Muzzle
-var BulletScene = preload("res://bullet.tscn")
+var BulletScene = preload("res://Scenes/bullet.tscn")
 
 func _ready():
 	add_to_group("player")
@@ -46,9 +45,9 @@ func shoot():
 	
 	
 func take_damage(amount: int):
-	hp -= amount
-	print("HP:", hp)
-	if hp <= 0:
+	GameState.hp -= amount
+	print("HP:", GameState.hp)
+	if GameState.hp <= 0:
 		die()
 
 func die():

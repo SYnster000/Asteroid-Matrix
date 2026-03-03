@@ -16,5 +16,8 @@ func _ready():
 	
 func _on_area_entered(area):
 	if area.is_in_group("asteroid"):
+		GameState.score += 1
 		area.queue_free()  # destrói o asteroide
-		queue_free()       # destrói a bala
+		queue_free() 
+		print("Score: ",GameState.score)      # destrói a bala
+	

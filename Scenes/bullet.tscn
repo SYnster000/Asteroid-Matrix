@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://3stbmev5qth1"]
 
-[ext_resource type="Script" uid="uid://d0u2ynnurcwv" path="res://bullet.gd" id="1_v7oki"]
+[ext_resource type="Script" uid="uid://d0u2ynnurcwv" path="res://Scripts/bullet.gd" id="1_v7oki"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_v8qja"]
 b = Vector2(1.753659e-07, 5)

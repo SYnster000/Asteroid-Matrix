@@ -2,7 +2,7 @@ extends Node2D
 
 @export var asteroid_scene: PackedScene
 @export var max_on_screen: int = 5
-@export var spawn_limit: int = 20   # -1 para infinito
+@export var spawn_limit: int = -1   # -1 para infinito
 @export var spawn_interval: float = 1.5
 
 var spawned_total := 0
